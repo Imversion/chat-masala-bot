@@ -33,8 +33,8 @@ function toggleBot() {
 // Function to insert bot button
 function insertBotButton() {
   if (!document.getElementById('botButton')) {
-    const button =
-      '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:9vw;width:9vwx;z-index:1;border-radius:50%;background:#D9D9D9; src="images/bot.png" alt="img" />';
+    insertMediaStyleForBotButton();
+    const button = '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:7vw;width:7vw;z-index:1;border-radius:50%;background:#D9D9D9; src="images/bot.png" alt="img" />';
     const main = document.getElementById('maindiv');
     if (main) {
       main.insertAdjacentHTML('afterend', button);
@@ -43,6 +43,15 @@ function insertBotButton() {
       throw Error('Please add [maindiv] as id to your main div/ui section');
     }
   }
+}
+// Function to add media query css
+function insertMediaStyleForBotButton(){
+  // Create a new style element
+  var styleElement = document.createElement('style');
+  // Set the text content to the CSS code
+  styleElement.textContent = ' @media (max-width: 568px) { #botButton { height: 12vw !important; width: 12vw !important;}}';
+  // Append the style element to the head section
+  document.head.appendChild(styleElement);
 }
 
 export { insertBotUI, insertBotButton, closeBot };
