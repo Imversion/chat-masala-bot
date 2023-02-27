@@ -2,11 +2,11 @@
 
 ## Getting started
 
-# To install
+### To install
 ```
 npm install https://github.com/Imversion/chat-masala-bot.git
 ```
-# Setup
+### Setup
 - Step 1
 	import in index or main file of your project
 	Ex: ```import { insertBotButton } from 'chat-masala-bot';```
