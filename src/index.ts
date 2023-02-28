@@ -24,10 +24,10 @@ function insertBotUI() {
 function toggleBot() {
   if (document.getElementById('botUi')) {
     closeBot();
-    (document.getElementById('botButton') as HTMLInputElement).src = 'images/bot.png';
+    (document.getElementById('botButton') as HTMLInputElement).src =  'https://imversion.s3.us-west-2.amazonaws.com/bot.png';
   } else {
     insertBotUI();
-    (document.getElementById('botButton') as HTMLInputElement).src = 'images/close.png';
+    (document.getElementById('botButton') as HTMLInputElement).src = 'https://imversion.s3.us-west-2.amazonaws.com/close.png';
   }
 }
 // Function to insert bot button

@@ -42,10 +42,10 @@ function insertBotUI() {
 function toggleBot() {
 	if ( document.getElementById( 'botUi' ) ) {
 	  closeBot();
-	  document.getElementById( 'botButton' ).src = 'images/bot.png';
+	  document.getElementById( 'botButton' ).src = 'https://imversion.s3.us-west-2.amazonaws.com/bot.png';
 	} else {
 	  insertBotUI();
-	  document.getElementById( 'botButton' ).src = 'images/close.png';
+	  document.getElementById( 'botButton' ).src = 'https://imversion.s3.us-west-2.amazonaws.com/close.png';
 	}
 }
 
