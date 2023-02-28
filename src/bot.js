@@ -13,7 +13,7 @@
 function insertBotButton() {
 	if ( ! document.getElementById( 'botButton' ) ) {
 	  insertMediaStyleForBotButton();
-	  const button = '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:7vw;width:7vw;z-index:1;border-radius:50%;background:#D9D9D9; src="images/bot.png" alt="img" />';
+	  const button = '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:7vw;width:7vw;z-index:1;border-radius:50%;background:#D9D9D9; src="https://imversion.s3.us-west-2.amazonaws.com/bot.png" alt="img" />';
 	  let template =document.createElement( 'div' );
 	  template.innerHTML = button;
 	  document.body.appendChild( template );
