@@ -12,7 +12,7 @@ function closeBot() {
 // This will inject bot ui / bot input
 function insertBotUI() {
   const html =
-    '<div id="botUi" style="position:fixed; bottom: 50px;width: -webkit-fill-available;"><object type="text/html" data="https://chat-masala.imvcloud.com/" style="overflow:auto;z-index:9999;width: inherit;height: 500rem;"></object></div>';
+  `<div id="botUi" style="position:fixed; bottom: 50px;width: -webkit-fill-available;z-index:999"><object type="text/html" data="https://chat-masala.imvcloud.com?${window.location.hostname}" style="overflow:auto;z-index:9999;width: inherit;height: 500rem;"></object></div>`;
   const main = document.getElementById('maindiv');
   if (main) {
     main.insertAdjacentHTML('afterend', html);
@@ -34,7 +34,7 @@ function toggleBot() {
 function insertBotButton() {
   if (!document.getElementById('botButton')) {
     insertMediaStyleForBotButton();
-    const button = '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:7vw;width:7vw;z-index:1;border-radius:50%;background:#D9D9D9; src="https://imversion.s3.us-west-2.amazonaws.com/bot.png" alt="img" />';
+    const button = '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:7vw;width:7vw;z-index:9999;border-radius:50%;background:#D9D9D9; src="https://imversion.s3.us-west-2.amazonaws.com/bot.png" alt="img" />';
     const main = document.getElementById('maindiv');
     if (main) {
       main.insertAdjacentHTML('afterend', button);

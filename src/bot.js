@@ -33,8 +33,9 @@ function closeBot() {
   // Function to add bot UI
   // This will inject bot ui / bot input
 function insertBotUI() {
+	
 	const html =
-	  '<div id="botUi" style="position:fixed; bottom: 50px;width: -webkit-fill-available;z-index:999"><object type="text/html" data="https://chat-masala.imvcloud.com/" style="overflow:auto;z-index:9999;width: inherit;height: 500rem;"></object></div>';
+	  `<div id="botUi" style="position:fixed; bottom: 50px;width: -webkit-fill-available;z-index:999"><object type="text/html" data="https://chat-masala.imvcloud.com?${window.location.hostname}" style="overflow:auto;z-index:9999;width: inherit;height: 500rem;"></object></div>`;
 	document.body.insertAdjacentHTML( 'afterend', html );
 }
 
