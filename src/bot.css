@@ -1,0 +1,35 @@
+.bot-button{
+    box-shadow: 1px 5px 10px 1px  rgba(0, 0, 0, 0.26);
+	position: fixed;
+	bottom: 2vw;
+	right: 2vw;
+	padding: 10px;
+	height: 60px;
+	width: 60px;
+	z-index: 9999;
+	border-radius: 50%;
+	background: #D9D9D9;
+}
+.bot-button:hover {
+    transition: .4s;
+    background: #8f8e8e;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+    border: 1px solid #8f8e8e;
+}
+.bot-ui {
+	position:fixed; 
+	bottom: 5px;
+	width:inherit;
+	/* width: -webkit-fill-available; */
+	z-index:999
+}
+.bot-input {
+	overflow:auto;
+	z-index:9999;
+	width: inherit;
+	height: 500rem;
+}
+
+@media (max-width: 568px){
+	.bot-button { height: 12vw; width: 12vw;}
+}

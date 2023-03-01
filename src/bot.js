@@ -1,19 +1,19 @@
 
- // Function to add media query css
- function insertMediaStyleForBotButton(){
-	// Create a new style element
-	let styleElement = document.createElement( 'style' );
-	// Set the text content to the CSS code
-	styleElement.textContent = ' @media (max-width: 568px) { #botButton { height: 12vw !important; width: 12vw !important;}}';
-	// Append the style element to the head section
-	document.head.appendChild( styleElement );
-}
+//  // Function to add media query css
+//  function insertMediaStyleForBotButton(){
+// 	// Create a new style element
+// 	let styleElement = document.createElement( 'style' );
+// 	// Set the text content to the CSS code
+// 	styleElement.textContent = ' @media (max-width: 568px) { #botButton { height: 12vw !important; width: 12vw !important;}}';
+// 	// Append the style element to the head section
+// 	document.head.appendChild( styleElement );
+// }
 
  // Function to insert bot button
 function insertBotButton() {
 	if ( ! document.getElementById( 'botButton' ) ) {
-	  insertMediaStyleForBotButton();
-	  const button = '<img id="botButton" style=position:fixed;bottom:5vw;right:50px;padding:10px;height:7vw;width:7vw;z-index:9999;border-radius:50%;background:#D9D9D9; src="https://imversion.s3.us-west-2.amazonaws.com/bot.png" alt="img" />';
+	//   insertMediaStyleForBotButton();
+	  const button = '<img id="botButton" class="bot-button" src="https://imversion.s3.us-west-2.amazonaws.com/bot.png" alt="img" />';
 	  let template =document.createElement( 'div' );
 	  template.innerHTML = button;
 	  document.body.appendChild( template );
@@ -33,9 +33,8 @@ function closeBot() {
   // Function to add bot UI
   // This will inject bot ui / bot input
 function insertBotUI() {
-	
 	const html =
-	  `<div id="botUi" style="position:fixed; bottom: 50px;width: -webkit-fill-available;z-index:999"><object type="text/html" data="https://chat-masala.imvcloud.com?${window.location.hostname}" style="overflow:auto;z-index:9999;width: inherit;height: 500rem;"></object></div>`;
+	  `<div id="botUi" class="bot-ui"><object type="text/html" data="https://chat-masala.imvcloud.com?${window.location.hostname}" class="bot-input"></object></div>`;
 	document.body.insertAdjacentHTML( 'afterend', html );
 }
 
@@ -50,5 +49,5 @@ function toggleBot() {
 	}
 }
 
-insertMediaStyleForBotButton();
+// insertMediaStyleForBotButton();
 insertBotButton();
