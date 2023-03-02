@@ -19,7 +19,7 @@
 .bot-ui {
 	position:fixed; 
 	bottom: 5px;
-	width:inherit;
+	width: 100%;
 	/* width: -webkit-fill-available; */
 	z-index:999
 }
