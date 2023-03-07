@@ -42,7 +42,7 @@ function closeBotButton() {
   // This will inject bot ui / bot input
 function insertRightBotUI() {
 	const html =
-	  `<div id="botUi" class="bot-ui-right"><div id="closeBot" class="close-chat">X</div><div class="divider"></div><object type="text/html" data="https://chat-masala.imvcloud.com?${window.location.hostname}" class="bot-input-right"></object></div>`;
+	  `<div id="botUi" class="bot-ui-right"><div id="closeBot" class="close-chat">X</div><div class="divider"></div><object type="text/html" data="https://chat-masala.imvcloud.com/?${window.location.hostname}" class="bot-input-right"></object></div>`;
 	document.body.insertAdjacentHTML( 'afterend', html );
 	document.getElementById( 'closeBot' ).onclick = toggleBot;
 }
