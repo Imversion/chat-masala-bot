@@ -15,7 +15,13 @@
     background: #8f8e8e;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
     border: 1px solid #8f8e8e;
+	cursor: pointer;
 }
+
+#closeBot:hover{
+	cursor: pointer;
+}
+
 .bot-ui {
 	position:fixed; 
 	bottom: 5px;
@@ -33,11 +39,12 @@
 	position:fixed; 
 	right: 5px;
 	bottom: 5px;
-	width: 380px;
-	height: 500px;
-	border: 1px solid rgb(74, 74, 74);
+	width: 350px;
+	height: 420px;
+	background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 	z-index:999;
-	background: #fbfbfbfa;
 }
 #root div.chatbox-ui {
 	position: absolute;
@@ -52,8 +59,6 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid;
-    margin-right: 1px;
-    padding-right: 30px;
 }
 .bot-input-right {
 	/* overflow:auto; */
@@ -80,7 +85,7 @@
 	.bot-button { height: 12vw; width: 12vw;}
 	.bot-ui-right {
 		width: inherit;
-    	padding-inline: 10px;
+    	padding-inline: 5px;
 		right: 0px;
 	}
 }
